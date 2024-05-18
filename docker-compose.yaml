@@ -6,7 +6,7 @@ services:
     container_name: opendevin
     environment:
       - SANDBOX_USER_ID=${SANDBOX_USER_ID}
-      - WORKSPACE_MOUNT_PATH=${WORKSPACE_BASE}
+      - /app=${WORKSPACE_BASE}
     volumes:
       - ${WORKSPACE_BASE}:/opt/workspace_base
       - /var/run/docker.sock:/var/run/docker.sock
